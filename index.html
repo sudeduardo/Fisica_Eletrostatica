@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fisica</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h4 id="title" class="text-center">Eletrostática -Fisica</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-4">
+                    Constante Eletrica
+                </div>
+                <div class="col-md-4">
+                    <h3>9.10^9</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    Adcionar Objeto
+                </div>
+                <div class="col-md-4">
+                    <button class=" btn btn-sm btn-default" id="add" data-toggle="modal" data-target="#myModal"><i
+                            class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+
+
+            </div>
+
+            <table class="table-bordered">
+                <thead>
+                <td>Nome do Objeto</td>
+                <td>Carga</td>
+                <td>Posição(X,Y)</td>
+                <td>Opções</td>
+                </thead>
+                <tbody id="objetos">
+                </tbody>
+            </table>
+            <br>
+            <table class="table-bordered">
+                <thead>
+                <td>Força</td>
+                <td>Valor</td>
+                <td>Objetos</td>
+                <td>Tipo de Força</td>
+                </thead>
+                <tbody id="forcas">
+                </tbody>
+            </table>
+        </div>
+        <canvas class="col-md-8" id="plano" style="background: #ffffff">
+
+        </canvas>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="color:black;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Adicionar Objeto</h4>
+            </div>
+            <div class="modal-body">
+
+                Nome do Objeto:<input type="text" id="nome_obj"><br><br>
+                Carga(µ=>10^-6)<input type="number" id="carga"><br><br>
+                Tipo de carga<select id="tipo">
+                <option value="+">+</option>
+                <option value="-">-</option>
+            </select><br><br>
+                Localização<br> (X)<input type="number" id="x" min="0"> (Y)<input type="number" id="y" min="0">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="salvar">Salvar Objeto</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
